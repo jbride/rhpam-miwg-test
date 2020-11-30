@@ -1,4 +1,4 @@
-= RH-PAM BPM MIWG Test
+= RH-PAM BPMN MIWG Test
 
 :numbered:
 
