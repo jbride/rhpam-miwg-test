@@ -12,7 +12,12 @@ The version of RH-PAM tooling utilized is:   RH-PAM 7.9  (7.44.0.Final-redhat-00
 
 === Result Summary
 There are a total of 16 sample BPMN files provided by the OMG BPMN MIWG.
-Using the RH-PAM org.kie:kie-maven-plugin, there are a considerable of compilation exceptions. 
+Using the RH-PAM org.kie:kie-maven-plugin, there are a considerable of compilation exceptions.
+
+In Business Central, these 16 sample BPMN files do render.
+However, when building these 16 sample BPMN files in Business Central, the following is displayed to the end-user:
+
+image::docs/images/bc_build_master.png[]
 
 
 === Recommendations
@@ -57,7 +62,9 @@ A.1.0.bpmn  A.2.0.bpmn  A.2.1.bpmn  A.3.0.bpmn  A.4.0.bpmn  A.4.1.bpmn  B.1.0.bp
 C.1.0.bpmn  C.1.1.bpmn  C.2.0.bpmn  C.3.0.bpmn  C.4.0.bpmn  C.5.0.bpmn  C.6.0.bpmn  C.7.0.bpmn
 -----
 
-== Test Procedure
+== Tests 
+
+=== All Sample Processes Built via KIE Plugin
 
 . Ensure the latest Maven is installed along with JDK 11+
 +
@@ -75,3 +82,16 @@ OS name: "linux", version: "5.9.10-200.fc33.x86_64", arch: "amd64", family: "uni
 -----
 $ mvn clean package
 -----
+
+=== Individual Sample Processes via Business Central
+. The following 3 branches are provided in the git repo:
++
+-----
+$ git branch -l
+
+  A3
+  A4
+  C1
+-----
+
+. Each of these branches can be checked-out in BC
