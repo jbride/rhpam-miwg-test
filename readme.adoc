@@ -5,20 +5,20 @@
 == Overview
 The purpose of this `KIE project` is to test sample BPMN provided by the link:http://www.omgwiki.org/bpmn-miwg/doku.php[OMG BPMN MIWG] using RH-PAM tooling.
 
-NOTE:  At this time, only compilation of the BPMN files (using org.kie:kie-maven-plugin) is being attempted.  Importing of BPMN into RH-PAM Business Central (or Kogito tooling) has not been attempted.
+There are a total of 16 sample BPMN files (provided by the OMG BPMN MIWG) copied to this KIE project.
 
 === RH-PAM Version
 The version of RH-PAM tooling utilized is:   RH-PAM 7.9  (7.44.0.Final-redhat-00003)
 
 === Result Summary
-There are a total of 16 sample BPMN files provided by the OMG BPMN MIWG.
-Using the RH-PAM org.kie:kie-maven-plugin, there are a considerable of compilation exceptions.
 
+*kie-maven-plugin* :   Using the RH-PAM org.kie:kie-maven-plugin, there are a considerable number of compilation exceptions.
+
+*Business Central*:
 In Business Central, these 16 sample BPMN files do render.
 However, when building these 16 sample BPMN files in Business Central, the following is displayed to the end-user:
 
 image::docs/images/bc_build_master.png[]
-
 
 === Recommendations
 
