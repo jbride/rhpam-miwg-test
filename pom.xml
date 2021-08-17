@@ -10,7 +10,7 @@
   <name>rhpam-miwg-test</name>
 
   <properties>
-    <version.org.kie>7.44.0.Final-redhat-00003</version.org.kie>
+    <version.org.kie>7.52.0.Final-redhat-00008</version.org.kie>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -125,13 +125,12 @@
       </build>
     </profile>
   </profiles>
+
   <repositories>
-    <!-- Bootstrap repository to locate the parent pom when the parent pom 
-      has not been build locally. -->
     <repository>
       <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+      <name>Red Hat Maven Repository Group</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
       <layout>default</layout>
       <releases>
         <updatePolicy>never</updatePolicy>
@@ -141,4 +140,18 @@
       </snapshots>
     </repository>
   </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>redhat-ga</id>
+      <url>https://maven.repository.redhat.com/ga/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+
 </project>
